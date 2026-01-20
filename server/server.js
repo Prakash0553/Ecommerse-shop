@@ -1,3 +1,5 @@
+require("dotenv").config
+
 const express = require('express')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
@@ -20,11 +22,11 @@ const commonFeatureRouter = require('./routes/common/feature-routes')
 
 // create database connection
 //we can alseo create seperate file for this and then import that file here
-mongoose.connect("mongodb+srv://prakashgiri20540811_db_user:nov261997ecom@cluster0.46g1lyr.mongodb.net/ecommerce2025").then(()=>
+mongoose.connect(process.env.MONGO_URL).then(()=>
                  console.log('Database connected')).catch(error=> console.log(error))
 
 const app = express()
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(
     cors({
