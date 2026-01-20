@@ -24,7 +24,7 @@ mongoose.connect("mongodb+srv://prakashgiri20540811_db_user:nov261997ecom@cluste
                  console.log('Database connected')).catch(error=> console.log(error))
 
 const app = express()
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 app.use(
     cors({
