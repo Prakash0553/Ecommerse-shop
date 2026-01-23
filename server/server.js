@@ -64,7 +64,7 @@ app.use('/api/shop/search', shopSearchRouter)
 app.use('/api/shop/review', shopReviewRouter)
 
 //common
-app.use('/api/common/feature', commonFeatureRouter)
+app.use('/api/common/feature', commonFeatureRouter);
 
 
 
